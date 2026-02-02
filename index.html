@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hortisort | Fruit Sorting & Grading Machines</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      color: #333;
+    }
+
+    header {
+      background: #0f3d2e;
+      color: #fff;
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .btn {
+      background: #f4a261;
+      padding: 8px 15px;
+      color: #000;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    section {
+      padding: 60px 50px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #0f3d2e;
+    }
+
+    .hero {
+      background: #e9f5ef;
+      text-align: center;
+      padding: 100px 50px;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #f7f7f7;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .dark {
+      background: #0f3d2e;
+      color: #fff;
+    }
+
+    .dark h2 {
+      color: #fff;
+    }
+
+    footer {
+      background: #222;
+      color: #aaa;
+      padding: 40px 50px;
+    }
+
+    footer a {
+      color: #aaa;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    form button {
+      background: #0f3d2e;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <h3>Hortisort</h3>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#technology">Technology</a>
+    <a href="#company">Company</a>
+    <a href="#resources">Resources</a>
+    <a href="#case">Case Studies</a>
+    <a href="#videos">Videos</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="#contact" class="btn">Request Demo</a>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <h1>India’s First Commercial-Scale High-Speed Optical Fruit Sorting Machine</h1>
+  <p>Advanced technology to sort, grade, and pack fruits faster, smarter, and more accurately.</p>
+  <a href="#contact" class="btn">Speak to an Expert</a>
+</section>
+
+<!-- CAPABILITIES -->
+<section>
+  <h2>Smart Sorting Based On What Matters</h2>
+  <div class="grid">
+    <div class="card">Size</div>
+    <div class="card">Colour</div>
+    <div class="card">Shape</div>
+    <div class="card">Weight</div>
+    <div class="card">Surface Defects</div>
+    <div class="card">Internal Defects</div>
+    <div class="card">Internal Properties</div>
+  </div>
+</section>
+
+<!-- WHY SORT -->
+<section class="dark">
+  <h2>Why Should You Sort Your Produce?</h2>
+  <ul>
+    <li>Faster and efficient packing</li>
+    <li>Uniform quality for different markets</li>
+    <li>Better pricing and grading</li>
+    <li>Reduced wastage and spoilage</li>
+    <li>Better logistics and storage planning</li>
+  </ul>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <h2>Our Products</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Citron</h3>
+      <p>High-speed citrus fruit sorting machine built for accuracy and volume.</p>
+    </div>
+    <div class="card">
+      <h3>Appletron</h3>
+      <p>Precision grading system for apples and premium fruits.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGY -->
+<section id="technology">
+  <h2>How Hortisort Technology Works</h2>
+  <p>Our machines use cameras, sensors, and intelligent software to inspect every fruit in real time.</p>
+  <ol>
+    <li>Fruit feeding</li>
+    <li>Optical & sensor scanning</li>
+    <li>Quality analysis</li>
+    <li>Automatic grading</li>
+    <li>Packing-ready output</li>
+  </ol>
+</section>
+
+<!-- COMPANY -->
+<section id="company">
+  <h2>About Hortisort</h2>
+  <p>Hortisort delivers advanced fruit sorting and grading solutions for farmers, exporters, and processors.</p>
+  <h3>Core Values</h3>
+  <ul>
+    <li>Innovation</li>
+    <li>Quality & Precision</li>
+    <li>Customer Success</li>
+    <li>Sustainability</li>
+  </ul>
+</section>
+
+<!-- RESOURCES -->
+<section id="resources">
+  <h2>Resources & Knowledge Hub</h2>
+  <p>Industry insights, grading standards, post-harvest handling, and technology updates.</p>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="case">
+  <h2>Case Studies</h2>
+  <p>See how our clients improved quality and reduced losses using Hortisort machines.</p>
+</section>
+
+<!-- VIDEOS -->
+<section id="videos">
+  <h2>Videos</h2>
+  <p>Machine demos, factory walkthroughs, and customer testimonials.</p>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <h2>Testimonials</h2>
+  <p>Trusted by fruit businesses across India.</p>
+</section>
+
+<!-- CAREERS -->
+<section>
+  <h2>Careers</h2>
+  <p>Join us and build innovative agri-tech solutions.</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p><strong>Corporate Office:</strong> Touchdown Building (GF), HAL Industrial Estate, Bangalore</p>
+  <p><strong>Email:</strong> hortisort@zentronlabs.com</p>
+  <p><strong>Phone:</strong> +91 63649 12525 | 080 2525 3535</p>
+
+  <form onsubmit="submitForm(event)">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Hortisort. All Rights Reserved.</p>
+</footer>
+
+<!-- JS -->
+<script>
+  function submitForm(e) {
+    e.preventDefault();
+    alert("Thank you! Our team will contact you soon.");
+  }
+</script>
+
+</body>
+</html>
