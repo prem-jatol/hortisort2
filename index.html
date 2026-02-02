@@ -1,275 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Hortisort | Fruit Sorting & Grading Machines</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hortisort | Fruit Sorting Technology</title>
 
-  <!-- CSS -->
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+<style>
+:root{
+  --green:#0f3d2e;
+  --light:#f4f7f6;
+  --accent:#f4a261;
+  --gray:#ddd;
+}
 
-    body {
-      line-height: 1.6;
-      color: #333;
-    }
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:system-ui, sans-serif;
+}
 
-    header {
-      background: #0f3d2e;
-      color: #fff;
-      padding: 15px 50px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+body{
+  line-height:1.6;
+  color:#333;
+}
 
-    header nav a {
-      color: #fff;
-      margin: 0 10px;
-      text-decoration: none;
-      font-size: 14px;
-    }
+/* HEADER */
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:var(--green);
+  color:#fff;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 30px;
+}
 
-    .btn {
-      background: #f4a261;
-      padding: 8px 15px;
-      color: #000;
-      border-radius: 4px;
-      text-decoration: none;
-      font-size: 14px;
-    }
+header nav{
+  display:flex;
+  gap:15px;
+}
 
-    section {
-      padding: 60px 50px;
-    }
+header nav a{
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+}
 
-    h2 {
-      margin-bottom: 20px;
-      color: #0f3d2e;
-    }
+.cta{
+  background:var(--accent);
+  padding:8px 14px;
+  border-radius:4px;
+  color:#000;
+  text-decoration:none;
+  font-weight:600;
+}
 
-    .hero {
-      background: #e9f5ef;
-      text-align: center;
-      padding: 100px 50px;
-    }
+/* SECTIONS */
+section{
+  padding:70px 30px;
+}
 
-    .hero h1 {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
+.container{
+  max-width:1200px;
+  margin:auto;
+}
 
-    .hero p {
-      max-width: 700px;
-      margin: auto;
-      margin-bottom: 30px;
-    }
+/* HERO */
+.hero{
+  background:var(--light);
+  text-align:center;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+.hero h1{
+  font-size:clamp(26px,4vw,40px);
+  margin-bottom:20px;
+}
 
-    .card {
-      background: #f7f7f7;
-      padding: 20px;
-      border-radius: 8px;
-    }
+.hero p{
+  max-width:800px;
+  margin:0 auto 30px;
+  color:#555;
+}
 
-    .dark {
-      background: #0f3d2e;
-      color: #fff;
-    }
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
 
-    .dark h2 {
-      color: #fff;
-    }
+.card{
+  background:#fff;
+  padding:25px;
+  border-radius:10px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
 
-    footer {
-      background: #222;
-      color: #aaa;
-      padding: 40px 50px;
-    }
+/* DARK SECTION */
+.dark{
+  background:var(--green);
+  color:#fff;
+}
 
-    footer a {
-      color: #aaa;
-      text-decoration: none;
-      display: block;
-      margin-bottom: 5px;
-    }
+.dark h2{
+  color:#fff;
+}
 
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-    }
+/* SKELETON LOADER */
+.skeleton{
+  background:linear-gradient(90deg,#eee 25%,#ddd 37%,#eee 63%);
+  background-size:400% 100%;
+  animation:shimmer 1.4s ease infinite;
+  height:120px;
+  border-radius:8px;
+}
 
-    form button {
-      background: #0f3d2e;
-      color: #fff;
-      padding: 10px;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
+@keyframes shimmer{
+  0%{background-position:100% 0}
+  100%{background-position:-100% 0}
+}
+
+/* LIST */
+ul{
+  margin-left:20px;
+}
+
+/* CONTACT */
+form{
+  max-width:500px;
+}
+
+input, textarea{
+  width:100%;
+  padding:12px;
+  margin-bottom:12px;
+  border:1px solid var(--gray);
+  border-radius:5px;
+}
+
+button{
+  background:var(--green);
+  color:#fff;
+  padding:12px;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  background:#111;
+  color:#aaa;
+  padding:40px 30px;
+}
+
+footer .grid{
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+}
+
+/* MOBILE NAV */
+@media(max-width:768px){
+  header nav{
+    display:none;
+  }
+}
+</style>
 </head>
+
 <body>
 
 <!-- HEADER -->
 <header>
-  <h3>Hortisort</h3>
+  <strong>Hortisort</strong>
   <nav>
     <a href="#home">Home</a>
     <a href="#products">Products</a>
-    <a href="#technology">Technology</a>
+    <a href="#tech">Technology</a>
     <a href="#company">Company</a>
-    <a href="#resources">Resources</a>
-    <a href="#case">Case Studies</a>
-    <a href="#videos">Videos</a>
     <a href="#contact">Contact</a>
   </nav>
-  <a href="#contact" class="btn">Request Demo</a>
+  <a class="cta" href="#contact">Request Demo</a>
 </header>
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <h1>India’s First Commercial-Scale High-Speed Optical Fruit Sorting Machine</h1>
-  <p>Advanced technology to sort, grade, and pack fruits faster, smarter, and more accurately.</p>
-  <a href="#contact" class="btn">Speak to an Expert</a>
+  <div class="container">
+    <h1>India’s First Commercial-Scale High-Speed Optical Fruit Sorting Machine</h1>
+    <p>Precision grading technology to help fruit businesses improve quality, reduce waste, and increase profitability.</p>
+    <a class="cta" href="#contact">Speak to an Expert</a>
+  </div>
 </section>
 
 <!-- CAPABILITIES -->
 <section>
-  <h2>Smart Sorting Based On What Matters</h2>
-  <div class="grid">
-    <div class="card">Size</div>
-    <div class="card">Colour</div>
-    <div class="card">Shape</div>
-    <div class="card">Weight</div>
-    <div class="card">Surface Defects</div>
-    <div class="card">Internal Defects</div>
-    <div class="card">Internal Properties</div>
+  <div class="container">
+    <h2>Smart Sorting Capabilities</h2><br>
+    <div class="grid">
+      <div class="card">Size</div>
+      <div class="card">Colour</div>
+      <div class="card">Shape</div>
+      <div class="card">Weight</div>
+      <div class="card">Surface Defects</div>
+      <div class="card">Internal Defects</div>
+      <div class="card">Internal Properties</div>
+    </div>
   </div>
 </section>
 
 <!-- WHY SORT -->
 <section class="dark">
-  <h2>Why Should You Sort Your Produce?</h2>
-  <ul>
-    <li>Faster and efficient packing</li>
-    <li>Uniform quality for different markets</li>
-    <li>Better pricing and grading</li>
-    <li>Reduced wastage and spoilage</li>
-    <li>Better logistics and storage planning</li>
-  </ul>
+  <div class="container">
+    <h2>Why Sort Your Produce?</h2><br>
+    <ul>
+      <li>Faster and consistent packing</li>
+      <li>Better market pricing through grading</li>
+      <li>Reduced spoilage and wastage</li>
+      <li>Improved logistics and storage planning</li>
+      <li>Market-specific quality compliance</li>
+    </ul>
+  </div>
 </section>
 
 <!-- PRODUCTS -->
 <section id="products">
-  <h2>Our Products</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Citron</h3>
-      <p>High-speed citrus fruit sorting machine built for accuracy and volume.</p>
-    </div>
-    <div class="card">
-      <h3>Appletron</h3>
-      <p>Precision grading system for apples and premium fruits.</p>
+  <div class="container">
+    <h2>Our Machines</h2><br>
+    <div class="grid">
+      <div class="card">
+        <h3>Citron</h3>
+        <p>High-speed citrus fruit sorting system built for volume and accuracy.</p>
+      </div>
+      <div class="card">
+        <h3>Appletron</h3>
+        <p>Advanced apple grading machine delivering export-grade quality.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- TECHNOLOGY -->
-<section id="technology">
-  <h2>How Hortisort Technology Works</h2>
-  <p>Our machines use cameras, sensors, and intelligent software to inspect every fruit in real time.</p>
-  <ol>
-    <li>Fruit feeding</li>
-    <li>Optical & sensor scanning</li>
-    <li>Quality analysis</li>
-    <li>Automatic grading</li>
-    <li>Packing-ready output</li>
-  </ol>
+<section id="tech">
+  <div class="container">
+    <h2>How Our Technology Works</h2><br>
+    <ol>
+      <li>Gentle fruit feeding</li>
+      <li>Optical & sensor scanning</li>
+      <li>AI-based quality analysis</li>
+      <li>Automatic grading</li>
+      <li>Packing-ready output</li>
+    </ol>
+  </div>
 </section>
 
 <!-- COMPANY -->
 <section id="company">
-  <h2>About Hortisort</h2>
-  <p>Hortisort delivers advanced fruit sorting and grading solutions for farmers, exporters, and processors.</p>
-  <h3>Core Values</h3>
-  <ul>
-    <li>Innovation</li>
-    <li>Quality & Precision</li>
-    <li>Customer Success</li>
-    <li>Sustainability</li>
-  </ul>
+  <div class="container">
+    <h2>About Hortisort</h2><br>
+    <p>We design and manufacture intelligent fruit sorting and grading solutions for India and global markets.</p><br>
+    <strong>Core Values</strong>
+    <ul>
+      <li>Innovation</li>
+      <li>Precision & Quality</li>
+      <li>Customer Success</li>
+      <li>Sustainability</li>
+    </ul>
+  </div>
 </section>
 
-<!-- RESOURCES -->
-<section id="resources">
-  <h2>Resources & Knowledge Hub</h2>
-  <p>Industry insights, grading standards, post-harvest handling, and technology updates.</p>
-</section>
-
-<!-- CASE STUDIES -->
-<section id="case">
-  <h2>Case Studies</h2>
-  <p>See how our clients improved quality and reduced losses using Hortisort machines.</p>
-</section>
-
-<!-- VIDEOS -->
-<section id="videos">
-  <h2>Videos</h2>
-  <p>Machine demos, factory walkthroughs, and customer testimonials.</p>
-</section>
-
-<!-- TESTIMONIALS -->
+<!-- RESOURCES (LOADING) -->
 <section>
-  <h2>Testimonials</h2>
-  <p>Trusted by fruit businesses across India.</p>
+  <div class="container">
+    <h2>Resources & Knowledge Hub</h2><br>
+    <div class="grid">
+      <div class="skeleton"></div>
+      <div class="skeleton"></div>
+      <div class="skeleton"></div>
+    </div>
+  </div>
 </section>
 
-<!-- CAREERS -->
+<!-- CASE STUDIES (LOADING) -->
 <section>
-  <h2>Careers</h2>
-  <p>Join us and build innovative agri-tech solutions.</p>
+  <div class="container">
+    <h2>Case Studies</h2><br>
+    <div class="grid">
+      <div class="skeleton"></div>
+      <div class="skeleton"></div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS (LOADING) -->
+<section>
+  <div class="container">
+    <h2>Videos</h2><br>
+    <div class="grid">
+      <div class="skeleton"></div>
+      <div class="skeleton"></div>
+      <div class="skeleton"></div>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <h2>Contact Us</h2>
-  <p><strong>Corporate Office:</strong> Touchdown Building (GF), HAL Industrial Estate, Bangalore</p>
-  <p><strong>Email:</strong> hortisort@zentronlabs.com</p>
-  <p><strong>Phone:</strong> +91 63649 12525 | 080 2525 3535</p>
+  <div class="container">
+    <h2>Contact Us</h2><br>
+    <p><strong>Office:</strong> HAL Industrial Estate, Bangalore</p>
+    <p><strong>Email:</strong> hortisort@zentronlabs.com</p>
+    <p><strong>Phone:</strong> +91 63649 12525</p><br>
 
-  <form onsubmit="submitForm(event)">
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message"></textarea>
-    <button type="submit">Submit</button>
-  </form>
+    <form onsubmit="sendForm(event)">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Requirement"></textarea>
+      <button>Submit</button>
+    </form>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 Hortisort. All Rights Reserved.</p>
+  <div class="grid">
+    <div>
+      <strong>Hortisort</strong>
+      <p>Advanced fruit sorting solutions.</p>
+    </div>
+    <div>
+      <strong>Quick Links</strong>
+      <a href="#">Products</a>
+      <a href="#">Technology</a>
+      <a href="#">Careers</a>
+    </div>
+    <div>
+      <strong>Contact</strong>
+      <p>Bangalore, India</p>
+    </div>
+  </div>
 </footer>
 
-<!-- JS -->
 <script>
-  function submitForm(e) {
-    e.preventDefault();
-    alert("Thank you! Our team will contact you soon.");
-  }
+function sendForm(e){
+  e.preventDefault();
+  alert("Thanks! Our team will contact you shortly.");
+}
 </script>
 
 </body>
